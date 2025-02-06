@@ -1,70 +1,62 @@
 import React from "react";
 import '../assets/styles/Footer.css'
+import { Link } from "react-router-dom";
+
+
 
 const Footer = () => {
   return (
-    <>
-      <footer className="footer">
-        <div className="container">
-          <div className="row">
-            <div className="footer-section">
-              <h4>POPULAR</h4>
-              <hr />
-              <ul>
-                <li>Sell With Us</li>
-                <li>Pre-Order</li>
-                <li>Customer Support</li>
-              </ul>
-            </div>
-            <div className="footer-section">
-              <h4>OUR COMMITMENT</h4>
-              <hr />
-              <ul>
-                <li>Delivery Within 24 Hours</li>
-                <li>Returns Without Questions</li>
-                <li>Quality Product At Best Price</li>
-                <li>Low Price Compare To Your Retail Outlet</li>
-              </ul>
-            </div>
-            <div className="footer-section">
-              <h4>SERVICES</h4>
-              <hr />
-              <ul>
-                <li>Corporate Training</li>
-                <li>Corporate Trainers</li>
-                <li>IT Consultancy</li>
-                <li>Software Development</li>
-                <li>IT Services</li>
-                <li>Website Development</li>
-              </ul>
-            </div>
-            <div className="footer-section">
-              <h4>CONTACT</h4>
-              <hr />
-              <address>
-                2nd Floor, Opposite WaterTank, WorkShop Corner, Nanded,
-                Maharashtra 431605 INDIA
-                <br />
-                +91 8625817334, +91 9890796149
-                <br />
-                <a href="mailto:Sales@Tekisky.Com">Sales@Tekisky.Com</a>
-                <br />
-                <a href="#">Login</a>
-              </address>
-            </div>
-          </div>
-          <div className="footer-bottom text-center">
-            <p>
-              Copyright © Tekisky Pvt Ltd All Rights Reserved.
-              <br />
-              +91 7387737731, +91 8625817334
-              <br />
-              <a href="mailto:Sales@Tekisky.Com">Sales@Tekisky.Com</a>
-            </p>
-          </div>
+    <footer className="footer">
+      <div className="footer-container">
+        {/* Popular Section */}
+        <div className="footer-section">
+          <h2 className="footer-title">Popular</h2>
+          <ul>
+            <li><Link to="/SellWithUs"><a href="#">Sell With Us</a></Link></li>
+            <li><Link to="/PreOrder"><a href="#">Pre-Order</a></Link></li>
+            <li><Link to="/CustomerSupport"><a href="#">Customer Support</a></Link></li>
+          </ul>
         </div>
-      </footer>
-    </>
+
+        {/* Our Commitment Section */}
+        <div className="footer-section">
+          <h2 className="footer-title">Our Commitment</h2>
+          <ul>
+            <li>🚀 Fast Delivery (24 Hours)</li>
+            <li>🔄 Easy Returns</li>
+            <li>💰 Best Price Guaranteed</li>
+            <li>🏷️ Competitive Pricing</li>
+          </ul>
+        </div>
+
+        {/* Services Section */}
+        <div className="footer-section">
+          <h2 className="footer-title">Services</h2>
+          <ul>
+            <li>Corporate Training</li>
+            <li>IT Consultancy</li>
+            <li>Software Development</li>
+            <li>Website Development</li>
+            <li>IT Services Website Development</li>
+            
+          </ul>
+        </div>
+
+        {/* Contact Section */}
+        <div className="footer-section">
+          <h2 className="footer-title">Contact</h2>
+          <p>📍 2nd floor, opposite WaterTank, WorkShop Corner, Nanded, Maharashtra 431605 INDIA</p>
+          <p>📞 +91 8625817334</p>
+          <p>📞 +91 9890796149</p>
+          <p>✉️ <a href="mailto:sales@tekisky.com">sales@tekisky.com</a></p>
+        </div>
+      </div>
+
+      {/* Copyright */}
+      <div className="footer-bottom">
+        &copy; {new Date().getFullYear()} Tekisky Pvt Ltd. All Rights Reserved.
+      </div>
+    </footer>
   );
 };
 

@@ -1,0 +1,84 @@
+/* Container */
+.preorder-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Heading */
+h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* Discount & Info Text */
+.discount-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #0056b3;
+}
+
+.info-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: #0056b3;
+}
+
+/* Form Styling */
+.preorder-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* Labels */
+label {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #555;
+  font-weight: bold;
+}
+
+/* Required Star */
+.required {
+  color: red;
+}
+
+/* Inputs & Select */
+input,
+select,
+textarea {
+  width: 90%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Textarea */
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #0047ab;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.submit-btn:hover {
+  background-color: #003380;
+}
