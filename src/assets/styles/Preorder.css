@@ -1,0 +1,137 @@
+/* General container styles */
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333333;
+  margin-bottom: 25px;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input, textarea and button styles */
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 15px;
+  margin: 15px 0; /* Increased margin for better spacing */
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Ensures padding is included in element's width */
+}
+
+/* Focus styles for input and textarea */
+input:focus,
+textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Resizable textarea */
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Submit button styles */
+button {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+}
+
+/* Success/Failure message styles */
+.message {
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.message.success {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.message.error {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 1rem;
+  }
+
+  /* Add more responsive touch-ups for medium screens */
+  .message {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 12px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 0.9rem;
+  }
+
+  /* Reduce padding in buttons and text */
+  button {
+    padding: 12px;
+  }
+  
+  /* Message styling for smaller screens */
+  .message {
+    font-size: 0.85rem;
+    padding: 12px;
+  }
+}
