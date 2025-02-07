@@ -25,8 +25,13 @@
 .footer-title {
   font-size: 18px;
   color: #f9a826;
+  text-align: center;
+  margin-right: 20px;
+  padding: 10px;
   margin-bottom: 15px;
   font-weight: bold;
+  
+
 }
 
 /* Links and Text */

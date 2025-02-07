@@ -4,7 +4,7 @@ import SellWithUs from './components/SellWithUs'
 import { Route, Routes } from 'react-router-dom'
 import PreOrder from './components/PreOrder'
 import CustomerSupport from './components/CustomerSupport'
-import { Routes,Route } from 'react-router-dom'
+
 import NavBar from './components/NavBar'
 import Home from './pages/Home'
 import CategoryPage from './pages/CategoryPage'
