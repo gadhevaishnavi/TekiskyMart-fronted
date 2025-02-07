@@ -8,10 +8,9 @@ const ProductPage = () => {
   const { productId } = useParams(); // Get the product ID from the URL
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [currentImageIndex, setCurrentImageIndex] = useState();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
-    // console.log("fetching product with ID:",productId)//log the product id
     setLoading(true);
     axios
       .get(
@@ -31,7 +30,6 @@ const ProductPage = () => {
       })
       .finally(() => setLoading(false));
   }, [productId]);
-
 
   // Function to automatically change the image in the slider
   useEffect(() => {
