@@ -1,66 +1,85 @@
-/* Footer Container */
+/* Footer Styling */
 .footer {
-  background-color: #1a1a2e;
-  color: white;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #ffffff;
   padding: 40px 0;
   font-family: Arial, sans-serif;
 }
 
 .footer-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
-  max-width: 1200px;
-  margin: auto;
-  text-align: left;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
-/* Footer Sections */
 .footer-section {
   flex: 1;
-  min-width: 200px;
+  min-width: 250px;
   margin: 10px;
 }
 
-.footer-title {
-  font-size: 18px;
-  color: #f9a826;
-  text-align: center;
-  margin-right: 20px;
-  padding: 10px;
-  margin-bottom: 15px;
-  font-weight: bold;
-  
-
+.footer-section h3 {
+  border-bottom: 2px solid #00aaff;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
-/* Links and Text */
 .footer-section ul {
   list-style: none;
   padding: 0;
 }
 
 .footer-section ul li {
-  margin-bottom: 8px;
+  margin: 10px 0;
+  font-size: 14px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-section ul li:hover {
+  transform: translateX(5px);
+  color: #00aaff;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #00aaff;
+}
+
+.contact p {
+  margin: 8px 0;
   font-size: 14px;
 }
 
-.footer-section a {
+.contact a {
   text-decoration: none;
-  color: #f0f0f0;
-  transition: color 0.3s;
+  color: #00aaff;
+  font-weight: bold;
 }
 
-.footer-section a:hover {
-  color: #f9a826;
+.contact .login-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  background: #00aaff;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-/* Footer Bottom */
+.contact .login-btn:hover {
+  background: #007acc;
+}
+
 .footer-bottom {
   text-align: center;
-  margin-top: 30px;
-  padding-top: 10px;
-  border-top: 1px solid #444;
+  padding: 15px 0;
+  background: #0d1b2a;
   font-size: 14px;
-  color: #bbb;
 }

@@ -1,137 +1,55 @@
-/* General container styles */
 .form-container {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #ffffff;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+.form-container h2 {
   text-align: center;
-  font-size: 2rem;
-  color: #333333;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-/* Form styling */
 form {
   display: flex;
   flex-direction: column;
+  gap: 15px; /* Adds space between fields */
 }
 
-/* Input, textarea and button styles */
-input,
-textarea,
-button {
+input, textarea {
   width: 100%;
-  padding: 15px;
-  margin: 15px 0; /* Increased margin for better spacing */
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 1rem;
-  box-sizing: border-box; /* Ensures padding is included in element's width */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-/* Focus styles for input and textarea */
-input:focus,
-textarea:focus {
-  border-color: #4CAF50;
-  outline: none;
-}
-
-/* Resizable textarea */
 textarea {
-  resize: vertical;
-  min-height: 120px;
+  height: 100px;
 }
 
-/* Submit button styles */
 button {
-  background-color: #4CAF50;
+  background: #007bff;
   color: white;
-  font-size: 1.1rem;
+  font-size: 18px;
+  padding: 12px;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease-in-out;
 }
 
 button:hover {
-  background-color: #45a049;
+  background: #0056b3;
 }
 
-button:disabled {
-  background-color: #d3d3d3;
-  cursor: not-allowed;
-}
-
-/* Success/Failure message styles */
 .message {
-  margin-top: 20px;
-  padding: 15px;
-  font-size: 1rem;
-  font-weight: bold;
   text-align: center;
-  border-radius: 6px;
-}
-
-.message.success {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.message.error {
-  background-color: #f44336;
-  color: white;
-}
-
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-  .form-container {
-    padding: 15px;
-  }
-
-  h2 {
-    font-size: 1.75rem;
-  }
-
-  input,
-  textarea,
-  button {
-    font-size: 1rem;
-  }
-
-  /* Add more responsive touch-ups for medium screens */
-  .message {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .form-container {
-    padding: 12px;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  input,
-  textarea,
-  button {
-    font-size: 0.9rem;
-  }
-
-  /* Reduce padding in buttons and text */
-  button {
-    padding: 12px;
-  }
-  
-  /* Message styling for smaller screens */
-  .message {
-    font-size: 0.85rem;
-    padding: 12px;
-  }
+  margin-top: 15px;
+  font-size: 16px;
+  color: green;
 }

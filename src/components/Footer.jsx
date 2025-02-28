@@ -3,14 +3,12 @@ import '../assets/styles/Footer.css'
 import { Link } from "react-router-dom";
 
 
-
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Popular Section */}
         <div className="footer-section">
-          <h2 className="footer-title">Popular</h2>
+          <h3>POPULAR</h3>
           <ul>
             <li><Link to="/SellWithUs"><a href="#">Sell With Us</a></Link></li>
             <li><Link to="/PreOrder"><a href="#">Pre-Order</a></Link></li>
@@ -18,46 +16,43 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Our Commitment Section */}
         <div className="footer-section">
-          <h2 className="footer-title">Our Commitment</h2>
+          <h3>OUR COMMITMENT</h3>
           <ul>
-            <li>🚀 Fast Delivery (24 Hours)</li>
-            <li>🔄 Easy Returns</li>
-            <li>💰 Best Price Guaranteed</li>
-            <li>🏷️ Competitive Pricing</li>
+            <li>Delivery Within 24 Hours</li>
+            <li>Returns Without Questions</li>
+            <li>Quality Product At Best Price</li>
+            <li>Low Price Compared To Retail Outlet</li>
           </ul>
         </div>
 
-        {/* Services Section */}
         <div className="footer-section">
-          <h2 className="footer-title">Services</h2>
+          <h3>SERVICES</h3>
           <ul>
-            <li>Corporate Training</li>
-            <li>IT Consultancy</li>
-            <li>Software Development</li>
-            <li>Website Development</li>
-            <li>IT Services Website Development</li>
-            
+            <li><a href="#">Corporate Training</a></li>
+            <li><a href="#">Corporate Trainers</a></li>
+            <li><a href="#">IT Consultancy</a></li>
+            <li><a href="#">Software Development</a></li>
+            <li><a href="#">IT Services</a></li>
+            <li><a href="#">Website Development</a></li>
           </ul>
         </div>
 
-        {/* Contact Section */}
-        <div className="footer-section">
-          <h2 className="footer-title">Contact</h2>
-          <p>📍 2nd floor, opposite WaterTank, WorkShop Corner, Nanded, Maharashtra 431605 INDIA</p>
-          <p>📞 +91 8625817334</p>
-          <p>📞 +91 9890796149</p>
-          <p>✉️ <a href="mailto:sales@tekisky.com">sales@tekisky.com</a></p>
+        <div className="footer-section contact">
+          <h3>CONTACT</h3>
+          <p>2nd Floor, Opposite Water Tank, Workshop Corner, Nanded, Maharashtra 431605, INDIA</p>
+          <p>📞 +91 8625817334, +91 9890796149</p>
+          <p>📧 <a href="mailto:Sales@Tekisky.Com">Sales@Tekisky.Com</a></p>
+          {/* <a href="#" className="login-btn">Login</a> */}
         </div>
       </div>
 
-      {/* Copyright */}
       <div className="footer-bottom">
-        &copy; {new Date().getFullYear()} Tekisky Pvt Ltd. All Rights Reserved.
+        <p>Copyright © Tekisky Pvt Ltd. All Rights Reserved.</p>
       </div>
     </footer>
   );
 };
 
 export default Footer;
+
