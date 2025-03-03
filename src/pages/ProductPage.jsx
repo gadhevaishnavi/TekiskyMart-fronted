@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import "../assets/styles/ProductPage.css"; // Import the CSS for styling
-import Loader from "../components/Loader"; // Import the Loader component
+import { CartContext } from "../context/CartContext";
+import "../assets/styles/ProductPage.css";
+import Loader from "../components/Loader";
+import toast from "react-hot-toast";
+import Swal from "sweetalert2";
 
 const ProductPage = () => {
-  const { productId } = useParams(); // Get the product ID from the URL
+  const { productId } = useParams();
+  const { addToCart } = useContext(CartContext); // Get addToCart from Context
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -21,44 +25,53 @@ const ProductPage = () => {
           setProduct(response.data.product);
         } else {
           console.error("Product not found in API response.");
-          setProduct(null); // Set product to null to show "Product not found" message
+          setProduct(null);
         }
       })
       .catch((error) => {
         console.error("Error fetching product:", error);
-        setProduct(null); // In case of an error, set product to null
+        setProduct(null);
       })
       .finally(() => setLoading(false));
   }, [productId]);
 
-  // Function to automatically change the image in the slider
   useEffect(() => {
     const interval = setInterval(() => {
-      if (product && product.images && product.images.length > 0) {
+      if (product?.images?.length > 0) {
         setCurrentImageIndex((prevIndex) =>
           prevIndex === product.images.length - 1 ? 0 : prevIndex + 1
         );
       }
-    }, 3000); // Change image every 3 seconds
+    }, 3000);
 
-    return () => clearInterval(interval); // Cleanup on component unmount
+    return () => clearInterval(interval);
   }, [product]);
 
-  if (loading) {
-    return <Loader />; // Show loading spinner while fetching product data
-  }
+  const handleAddToCart = () => {
+    if (product) {
+      addToCart({
+        id: product._id,
+        image:product.images[0],
+        name: product.name,
+        price: product.offerprice,
+        quantity: 1,
+      });
+      Swal.fire({
+        title: "Success!",
+        text: "Product added to cart successfully",
+        icon: "success",
+        confirmButtonText: "OK",
+      });
+      // toast.success("Product added to cart successfully!");
+    }
+  };
 
-  if (!product) {
-    return (
-      <div className="product-not-found">
-        Product not found. Please try again later.
-      </div>
-    ); // Display error if no product found
-  }
+  if (loading) return <Loader />;
+  if (!product)
+    return <div className="product-not-found">Product not found.</div>;
 
   return (
     <div className="product-page-container">
-      {/* Product Image Slider */}
       <div className="product-slider">
         <img
           className="product-slider-image"
@@ -67,7 +80,6 @@ const ProductPage = () => {
         />
       </div>
 
-      {/* Product Details Section */}
       <div className="product-details">
         <h1 className="product-title">{product.name}</h1>
         <p className="product-heading">{product.heading}</p>
@@ -88,7 +100,9 @@ const ProductPage = () => {
           <span>Seller: {product.Seller}</span>
         </div>
         <div className="product-add-to-cart">
-          <button className="add-to-cart-button">Add to Cart</button>
+          <button className="add-to-cart-button" onClick={handleAddToCart}>
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>

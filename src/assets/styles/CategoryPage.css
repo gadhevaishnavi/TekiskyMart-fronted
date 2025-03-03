@@ -1,32 +1,32 @@
-/* Category Page Styles */
-.category-page-container {
+/* Category Products Page Styles */
+.category-products-container {
   padding: 20px;
   margin-top: 30px;
   text-align: center;
 }
 
-.category-page-title {
+.category-products-title {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 30px;
 }
 
 /* Loading Spinner */
-.loading-spinner {
+.category-products-loading {
   font-size: 24px;
-  color: #e74c3c;
+  color: #0056b3;
   margin-top: 50px;
 }
 
 /* Responsive Product Grid */
-.product-grid {
+.category-products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 10px;
 }
 
 /* Product Card */
-.product-card {
+.category-product-card {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -35,12 +35,12 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.product-card:hover {
+.category-product-card:hover {
   transform: translateY(-5px);
 }
 
 /* Product Image */
-.product-image {
+.category-product-image {
   width: 100%;
   height: 250px;
   object-fit: contain;
@@ -48,11 +48,11 @@
 }
 
 /* Product Details */
-.product-details {
+.category-product-details {
   padding: 10px;
 }
 
-.product-name {
+.category-product-name {
   font-size: 20px;
   font-weight: bold;
   margin: 10px 0;
@@ -61,125 +61,132 @@
   white-space: nowrap;
 }
 
-.product-price {
+.category-product-price {
   font-size: 16px;
   color: #555;
 }
 
-.mrp {
+.category-mrp {
   text-decoration: line-through;
   color: #888;
 }
 
-.offer-price {
-  color: #e74c3c;
+.category-offer-price {
+  color:  red;
   font-weight: bold;
 }
 
 /* Product Link Button */
-.product-link {
+.category-product-link {
   display: inline-block;
   margin-top: 10px;
   padding: 8px 15px;
-  background-color: #e74c3c;
+  background-color: #0056b3;
   color: white;
   text-decoration: none;
   border-radius: 5px;
   transition: background 0.3s ease-in-out;
 }
 
-.product-link:hover {
-  background-color: #c0392b;
+.category-product-link:hover {
+  background-color: #003f80;
+}
+
+/* No Products Message */
+.category-no-products {
+  font-size: 18px;
+  color: #777;
+  margin-top: 20px;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .category-page-title {
+  .category-products-title {
     font-size: 24px;
   }
 
-  .product-grid {
+  .category-products-grid {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 
-  .product-image {
+  .category-product-image {
     height: 220px;
   }
 
-  .product-name {
+  .category-product-name {
     font-size: 18px;
   }
 
-  .product-price {
+  .category-product-price {
     font-size: 14px;
   }
 
-  .product-link {
+  .category-product-link {
     font-size: 14px;
     padding: 7px 12px;
   }
 }
 
 @media (max-width: 768px) {
-  .category-page-title {
+  .category-products-title {
     font-size: 22px;
     margin-bottom: 20px;
   }
 
-  .product-grid {
+  .category-products-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
   }
 
-  .product-image {
+  .category-product-image {
     height: 200px;
   }
 
-  .product-name {
+  .category-product-name {
     font-size: 16px;
   }
 
-  .product-price {
+  .category-product-price {
     font-size: 14px;
   }
 
-  .product-link {
+  .category-product-link {
     font-size: 13px;
     padding: 6px 10px;
   }
 }
 
 @media (max-width: 480px) {
-  .category-page-container {
+  .category-products-container {
     padding: 10px;
   }
 
-  .category-page-title {
+  .category-products-title {
     font-size: 20px;
   }
 
-  .product-grid {
+  .category-products-grid {
     grid-template-columns: 1fr;
     gap: 10px;
   }
 
-  .product-card {
+  .category-product-card {
     padding: 12px;
   }
 
-  .product-image {
+  .category-product-image {
     height: 180px;
   }
 
-  .product-name {
+  .category-product-name {
     font-size: 15px;
   }
 
-  .product-price {
+  .category-product-price {
     font-size: 13px;
   }
 
-  .product-link {
+  .category-product-link {
     font-size: 12px;
     padding: 5px 8px;
   }

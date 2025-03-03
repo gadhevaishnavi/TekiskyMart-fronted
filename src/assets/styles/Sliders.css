@@ -33,7 +33,7 @@
 }
 
 .slick-dots li.slick-active button:before {
-  color: #ffcc00; /* Highlight active dot */
+  color: #007bff; /* Highlight active dot */
 }
 
 /* Responsive Design */
